@@ -1,0 +1,52 @@
+# Orchestrion
+
+> Agent-native task orchestration API.
+
+Orchestrion provides task lifecycle management for autonomous agents. It is not a workflow engine — it manages individual tasks with lease-based ownership, automatic retries, and machine-readable recovery guidance.
+
+## Key Concepts
+
+- **Task**: a unit of work with a type, payload, status, and lifecycle.
+- **Claim**: atomic ownership of a pending task by a worker.
+- **Lease**: time-bounded authority to work on a claimed task (30–3600 seconds).
+- **agent_contract**: machine-readable guidance included in every API response.
+
+## Task Lifecycle
+
+States: pending → claimed → completed | dead_letter | cancelled
+
+- Workers claim tasks by type; the server assigns the highest-priority available task.
+- Workers send heartbeats to renew the lease while working.
+- If the lease expires, the task returns to the queue automatically.
+- After exhausting max_attempts, the task moves to dead_letter.
+- Dead-letter tasks can be requeued manually.
+
+## Authentication
+
+Register: POST /v1/keys/register → returns an API key (orch_live_...).
+Use: Authorization: Bearer orch_live_...
+
+## Discovery Endpoints
+
+- GET /.well-known/agent.json — agent discovery manifest
+- GET /v1/capabilities — full API capabilities (limits, error codes, action codes)
+- GET /v1/tool — MCP-compatible tool manifest with input schemas
+- GET /v1/schema — OpenAPI 3.1 JSON schema
+
+## Authenticated Endpoints
+
+- POST /v1/tasks — create a task
+- GET /v1/tasks — list tasks (filtered, paginated)
+- GET /v1/tasks/{id} — get a task
+- POST /v1/tasks/claim — claim next available task by type
+- POST /v1/tasks/{id}/claim — claim a specific task
+- POST /v1/tasks/{id}/complete — complete with result
+- POST /v1/tasks/{id}/fail — report failure
+- POST /v1/tasks/{id}/heartbeat — renew lease
+- POST /v1/tasks/{id}/cancel — cancel a pending task
+- POST /v1/tasks/{id}/requeue — requeue a dead-letter task
+
+## Integration Guide
+
+See AGENTS.md for the full agent integration guide.
+See AGENT_CONTRACT.md for the agent_contract protocol specification.
