@@ -41,6 +41,13 @@ Testing was performed in two environments:
 
 ### Local Development
 
+| Spec | Details |
+|---|---|
+| OS | Windows 10 Home |
+| CPU | Intel Core i5-9600K @ 3.70 GHz (6 cores) |
+| RAM | 16 GB |
+| Database | PostgreSQL 16 (local) |
+
 - Local PostgreSQL instance
 - No disk or memory constraints
 - Used for large-scale retention benchmarks (10K–500K tasks)
