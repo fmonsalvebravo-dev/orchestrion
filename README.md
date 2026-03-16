@@ -100,49 +100,6 @@ This returns links to the capabilities document, tool manifest, OpenAPI schema, 
 
 ---
 
-## Running Locally
-
-### Requirements
-
-- Node.js v18+
-- PostgreSQL 16
-
-### Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Set environment
-# Create .env with:
-#   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/orchestrion_dev
-#   PORT=3000
-
-# Create the database
-psql -U postgres -c "CREATE DATABASE orchestrion_dev;"
-
-# Build and run (schema is applied automatically on startup)
-npm run build
-npm start
-
-# Or use dev mode
-npm run dev
-```
-
-The server starts on `http://localhost:3000`. The schema is applied automatically on startup — no manual migration step required.
-
-### Tests
-
-```bash
-# Unit and integration tests
-npm test
-
-# Load tests (requires database)
-npx jest src/__tests__/load/ --no-coverage
-```
-
----
-
 ## License
 
 All rights reserved.
