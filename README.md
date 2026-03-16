@@ -83,20 +83,20 @@ This returns links to the capabilities document, tool manifest, OpenAPI schema, 
 |---|---|
 | [AGENTS.md](AGENTS.md) | Agent integration guide |
 | [AGENT_CONTRACT.md](AGENT_CONTRACT.md) | `agent_contract` protocol specification |
-| [AGENT_WALKTHROUGH.md](AGENT_WALKTHROUGH.md) | Step-by-step agent interaction walkthrough |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Internal system architecture |
-| [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) | Key architectural decisions and rationale |
-| [CONCURRENCY_MODEL.md](CONCURRENCY_MODEL.md) | Concurrency safety model |
-| [RELIABILITY.md](RELIABILITY.md) | Reliability guarantees |
-| [OPERATIONS.md](OPERATIONS.md) | Production operations guide |
+| [AGENT_WALKTHROUGH.md](docs/AGENT_WALKTHROUGH.md) | Step-by-step agent interaction walkthrough |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Internal system architecture |
+| [DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) | Key architectural decisions and rationale |
+| [CONCURRENCY_MODEL.md](docs/CONCURRENCY_MODEL.md) | Concurrency safety model |
+| [RELIABILITY.md](docs/RELIABILITY.md) | Reliability guarantees |
+| [OPERATIONS.md](docs/OPERATIONS.md) | Production operations guide |
 | [SECURITY.md](SECURITY.md) | Security policy |
-| [SECURITY_MODEL.md](SECURITY_MODEL.md) | Security model deep-dive |
-| [API_PHILOSOPHY.md](API_PHILOSOPHY.md) | API design philosophy |
-| [WHY_THIS_EXISTS.md](WHY_THIS_EXISTS.md) | Design motivation and problem statement |
-| [PROTOCOL.md](PROTOCOL.md) | Formal protocol specification |
-| [TESTING.md](TESTING.md) | Testing methodology |
-| [LOAD_TESTING.md](LOAD_TESTING.md) | Load and performance testing |
-| [TEST_ENVIRONMENT.md](TEST_ENVIRONMENT.md) | Test environment description |
+| [SECURITY_MODEL.md](docs/SECURITY_MODEL.md) | Security model deep-dive |
+| [API_PHILOSOPHY.md](docs/API_PHILOSOPHY.md) | API design philosophy |
+| [WHY_THIS_EXISTS.md](docs/WHY_THIS_EXISTS.md) | Design motivation and problem statement |
+| [PROTOCOL.md](docs/PROTOCOL.md) | Formal protocol specification |
+| [TESTING.md](docs/TESTING.md) | Testing methodology |
+| [LOAD_TESTING.md](docs/LOAD_TESTING.md) | Load and performance testing |
+| [TEST_ENVIRONMENT.md](docs/TEST_ENVIRONMENT.md) | Test environment description |
 
 ---
 
