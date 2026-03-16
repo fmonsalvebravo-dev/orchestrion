@@ -145,4 +145,4 @@ npx jest src/__tests__/load/ --no-coverage
 
 ## License
 
-All rights reserved. See [LICENSE](LICENSE) for details.
+All rights reserved.
